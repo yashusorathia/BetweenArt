@@ -1,0 +1,204 @@
+/*----------------------------------------*/
+/*  01. Template default CSS
+/*----------------------------------------*/
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin transition($x){
+  transition: $x;
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+}
+
+// generic transform
+@mixin transform($x) {
+  transform: $x;
+  -webkit-transform: $x;
+  -moz-transform: $x;
+  -ms-transform: $x;
+  -o-transform: $x;
+}
+
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// transform origin
+@mixin transform-origin($x) {
+  transform-origin: $x;
+  -webkit-transform-origin: $x;
+  -moz-transform-origin: $x;
+  -ms-transform-origin: $x;
+  -o-transform-origin: $x;
+}
+
+// transform style
+@mixin transform-style($x) {
+  transform-style: $x;
+  -webkit-transform-style: $x;
+  -moz-transform-style: $x;
+  -ms-transform-style: $x;
+  -o-transform-style: $x;
+}
+
+
+
+/* Common Style */
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-family-base, Arial, Helvetica, sans-serif;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	font-style: normal;
+	line-height: $line-height-base;
+
+	position: relative;
+
+	visibility: visible;
+	overflow-x: hidden;
+
+	color: $body-color;
+	background-color: $white;
+
+  @media #{$desktop-device} {
+  	font-size: 15px;
+  }
+  @media #{$tablet-device} {
+  	font-size: 15px;
+  }
+  @media #{$large-mobile} {
+  	font-size: 15px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+
+	margin-top: 0;
+
+	color: $headings-color;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: inherit;
+
+	margin: 0;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+a, button {
+	line-height: inherit;
+
+	cursor: pointer;
+	text-decoration: none;
+
+	color: inherit;
+}
+
+a {
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+a, button, img, input {
+	transition: $transition-base;
+}
+
+*:focus {
+	outline: none;
+}
+
+a:focus {
+	text-decoration: none;
+
+	color: inherit;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: none;
+
+	color: $primary;
+}
+
+button, input[type="submit"] {
+	cursor: pointer;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+input, textarea {
+	@include placeholder {
+		opacity: 1;
+	}
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+  li {
+    list-style: none;
+  }
+}
+
+hr {
+	border-top-width: 2px;
+}

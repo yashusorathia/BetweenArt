@@ -1,0 +1,220 @@
+/*----------------------------------------*/
+/*  Contact CSS
+/*----------------------------------------*/
+
+.contact-area {
+  padding: 65px 0 0;
+  position: relative;
+}
+
+.contact-form {
+    @media #{$tablet-device, $large-mobile} {
+      margin-bottom: 60px;
+    }
+  .form-group {
+    margin-bottom: 56px;
+  }
+
+  .form-control {
+    box-shadow: none;
+    outline: none;
+    color: #3F3F3F;
+    font-size: 12px;
+    font-weight: $font-weight-medium;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border-width: 0 0 1px 0;
+    border-color: #B9B9B9;
+    padding-bottom: 16px;
+
+    @include placeholder {
+      color: #3F3F3F;
+    }
+  }
+
+  textarea {
+    &.form-control {
+      height: 138px;
+      resize: none;
+
+      @media #{$tablet-device, $large-mobile} {
+        height: 100px;
+      }
+    }
+  }
+}
+
+.contact-info {
+  background: #FFFAEF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 41px 0;
+  @media #{$large-mobile} {
+    flex-wrap: wrap;
+  }
+}
+
+.contact-info-item {
+  text-align: center;
+  width: 33.3333%;
+  @media #{$large-mobile} {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  @media #{$extra-small-mobile} {
+    width: 100%;
+  }
+
+  &:nth-child(2n) {
+    border-left: 2px solid #E0E0E0;
+    border-right: 2px solid #E0E0E0;
+    @media #{$large-mobile} {
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  .icon {
+    margin-bottom: 24px;
+    @media #{$tablet-device, $large-mobile} {
+      margin-bottom: 14px;
+    }
+  }
+
+  a, p {
+    color: $black;
+    font-size: 16px;
+    line-height: 28px;
+    display: block;
+    margin-bottom: 5px;
+    @media #{$tablet-device, $large-mobile} {
+      font-size: 15px;
+    }
+  }
+
+  a:hover {
+    color: $primary;
+  }
+
+  p {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+}
+
+.contact-left-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0px 30px 30px 0px;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: calc(50% - 15px);
+  @media #{$tablet-device, $large-mobile} {
+    height: 430px;
+    position: relative;
+    width: calc(100% - 15px);
+  }
+}
+
+.my-account-item-wrap {
+  .title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+  }
+}
+
+.my-account-form {
+  .form-group {}
+
+  label {
+    color: #262626;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 13px;
+
+    sup {
+      color: #e74c3c;
+      font-size: 12px;
+      top: 1px;
+    }
+  }
+
+  input {
+    border: 1px solid #D4D4D4;
+    box-shadow: none;
+    font-size: 14px;
+    display: block;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .btn {
+    padding: 5px 30px 5px;
+    border-radius: 0;
+    background-color: #262626;
+    border-color: #262626;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  .form-check {
+    line-height: 1;
+    padding: 0;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .form-check-input {
+    margin: 1px 0 0 0;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: 2px solid #D4D4D4;
+
+    &:checked[type=checkbox] {
+      border-color: $primary;
+    }
+  }
+
+  .form-check-label {
+    color: #202020;
+    font-size: 14px;
+    padding-left: 6px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .lost-password {
+    font-size: 12px;
+    color: #d25b5b;
+    margin-top: 14px;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+}

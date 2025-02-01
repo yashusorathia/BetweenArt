@@ -1,0 +1,150 @@
+/*
+-----------------------------------------------------------------------
+  Offcanvas Header
+-----------------------------------------------------------------------
+*/
+
+.off-canvas-wrapper {
+  &.offcanvas {
+    background-color: #1f1f1f;
+    width: 310px;
+    @media #{$tablet-device, $large-mobile} {
+      width: 310px;
+    }
+  }
+  .offcanvas-header {
+    padding: 0;
+  }
+  .offcanvas-body {
+    padding: 12px 20px 20px;
+    scrollbar-width: auto;
+    scrollbar-color: #1f1f1f #292929;
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #292929;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #1f1f1f;
+      border-radius: 2px;
+      border: 2px solid #1f1f1f;
+    }
+  }
+  .btn-menu-close {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: $primary;
+    opacity: 1;
+    border-radius: 0;
+    color: $white;
+    background-image: none;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: $font-weight-semi-bold;
+    text-align: left;
+    border: none;
+    position: relative;
+    @include transition(all .3s ease-out);
+
+    i {
+      position: absolute;
+      right: 21px;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+
+    &:hover {
+      color: $primary;
+      background-color: $black;
+    }
+  }
+}
+
+// Offcanvas Menu
+.offcanvas-menu-nav {
+  position: relative;
+  z-index: 1;
+}
+
+.offcanvas-menu-nav ul ul {
+  display: none;
+}
+
+.offcanvas-menu-nav li.active > ul {
+  display: block;
+}
+
+.offcanvas-menu-nav li {
+  a {
+    color: #fff;
+    display: block;
+    text-transform: capitalize;
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 15px 0;
+    line-height: 1;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.offcanvas-menu-nav li ul {
+  border-left: 1px solid rgba($white, .11);
+  padding-left: 18px;
+  margin-bottom: 18px;
+  li {
+    padding: 4px 0;
+    a {
+      color: #fff;
+      display: block;
+      text-transform: capitalize;
+      position: relative;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0;
+      line-height: 1.8;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.offcanvas-menu-nav {
+  .offcanvas-nav-parent {
+    ul {
+      li {
+        .offcanvas-nav-item {
+          font-size: 15px;
+          padding: 4px 0;
+          &:after {
+            top: 4px;
+          }
+        }
+        ul {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+.offcanvas-menu-nav a:not(:only-child):after {
+  content: "\f107";
+
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+.offcanvas-menu-nav .active > a:not(:only-child):after {
+  content: "\f106";
+}

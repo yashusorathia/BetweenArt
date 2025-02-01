@@ -1,0 +1,46 @@
+/*----------------------------------------*/
+/*  Template Classes CSS
+/*----------------------------------------*/
+
+.bg-img {
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.section-space {
+  padding-bottom: 115px;
+  padding-top: 115px;
+  @media #{$desktop-device} {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  @media #{$tablet-device} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media #{$large-mobile} {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.table>:not(:first-child) {
+    border-top: none;
+}
+
+.row {
+  margin-top: 0;
+
+  .col,
+  [class*=col-] {
+    margin-top: 0;
+  }
+}
+
+.modal {
+  z-index: 9999;
+}

@@ -1,0 +1,43 @@
+/*----------------------------------------*/
+/*  About CSS
+/*----------------------------------------*/
+
+.about-thumb {
+  margin-bottom: 84px;
+  @media #{$desktop-device} {
+    margin-bottom: 60px;
+  }
+  @media #{$tablet-device, $large-mobile} {
+    margin-bottom: 50px;
+  }
+}
+
+.about-content {
+  text-align: center;
+
+  .title {
+    font-size: 50px;
+    font-weight: $font-weight-normal;
+    margin-bottom: 34px;
+    @media #{$desktop-device} {
+      font-size: 40px;
+      margin-bottom: 14px;
+    }
+    @media #{$tablet-device} {
+      font-size: 35px;
+      margin-bottom: 14px;
+    }
+    @media #{$large-mobile} {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .desc {
+    max-width: 758px;
+    margin: 0 auto;
+    @media #{$desktop-device, $tablet-device, $large-mobile} {
+      font-size: 14px;
+    }
+  }
+}

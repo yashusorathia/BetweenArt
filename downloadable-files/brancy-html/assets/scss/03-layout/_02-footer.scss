@@ -1,0 +1,88 @@
+/*----------------------------------------*/
+/*  Footer CSS
+/*----------------------------------------*/
+
+.footer-area {
+  background: #FAFAFA;
+  border-radius: 10px 10px 0 0;
+}
+
+.footer-main {
+  padding: 100px 0 100px;
+
+  @media #{$desktop-device} {
+    padding: 70px 0 58px;
+  }
+  @media #{$tablet-device} {
+    padding: 70px 0 58px;
+  }
+  @media #{$large-mobile} {
+    padding: 70px 0 58px;
+  }
+
+  .widget-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+
+  .widget-logo {
+    display: inline-block;
+    margin-bottom: 38px;
+  }
+
+  .desc {
+    max-width: 285px;
+  }
+
+  .widget-nav {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      color: #364958;
+      font-size: 16px;
+      position: relative;
+      transition: $transition-base;
+      margin-bottom: 20px;
+      width: 33.3333%;
+      a {
+        transition: $transition-base;
+        &:hover {
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+
+  .widget-social {
+    display: flex;
+    a {
+      color: #353434;
+      font-size: 21px;
+      + {
+        a {
+          margin-left: 60px;
+        }
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.footer-bottom-content {
+  border-top: 1px
+  solid #E8E8E8;
+  text-align: center;
+  padding: 20px 0 19px;
+  p {
+    font-size: 14px;
+    color: #6D6D6D;
+    i {
+      color: #eb3e32;
+      font-size: 13px;
+      margin: 0 2px;
+    }
+  }
+}

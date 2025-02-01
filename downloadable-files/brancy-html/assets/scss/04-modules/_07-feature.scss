@@ -1,0 +1,39 @@
+/*----------------------------------------*/
+/*  Feature CSS
+/*----------------------------------------*/
+
+.feature-area {
+  background-color: #FFF6F5;
+}
+
+.feature-item {
+  .title {
+    font-weight: $font-weight-medium;
+    font-size: 21px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 20px;
+    @media #{$desktop-device, $tablet-device, $large-mobile} {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      margin-right: 21px;
+      @media #{$desktop-device, $tablet-device, $large-mobile} {
+        margin-right: 8px;
+        width: 48px;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 18px;
+    line-height: 1.7;
+    @media #{$desktop-device, $tablet-device, $large-mobile} {
+      font-size: 15px;
+    }
+  }
+}
